@@ -1,12 +1,9 @@
-@font-face {
-    font-family: pixer1;
-    src: url(../Pixellari.ttf);
-}
+
 
 
 #player-name,
 #final-time {
-    font-family: pixer1;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .modal {
@@ -30,16 +27,12 @@
     border: 3px groove #333;
     box-shadow: 3px 3px 6px #333;
     width: 80%;
-
     border-radius: 8px;
-
-
 
     h2,
     p {
-        font-family: pixer1;
+        font-family: Arial, Helvetica, sans-serif;
         text-align: center;
-
     }
 }
 
@@ -56,8 +49,6 @@
     text-decoration: none;
     cursor: pointer;
 }
-
-
 
 main {
     display: flex;
@@ -87,20 +78,25 @@ header {
     box-shadow: 2px 2px 5px #333333bd;
 
     .player {
-        font-size: 1.8em;
-        font-family: pixer1;
+        font-size: 1.4em;
+        font-family: Arial, Helvetica, sans-serif;
+        text-transform: capitalize;
+        font-weight: 700;
     }
 
     .timer {
         font-size: 1em;
-        font-family: pixer1;
+        font-family: Arial, Helvetica, sans-serif;
+        text-transform: uppercase;
+        font-weight: 700;
     }
 
     #timer {
+        font-weight: 700;
         font-size: 1.2em;
-        font-family: pixer1
+        font-family: Arial, Helvetica, sans-serif;
+        text-transform: capitalize;
     }
-
 }
 
 .grid {
@@ -114,10 +110,9 @@ header {
 
 .card {
     aspect-ratio: 3/4;
-
     border-radius: 5px;
     position: relative;
-    transition: all 500ms ease;
+  transition: all 500ms ease;
     transform-style: preserve-3d;
 }
 
@@ -131,7 +126,6 @@ header {
     border: 2px solid #333;
     box-shadow: 2px 2px 5px #3333339d;
     border-radius: 5px;
-
 }
 
 .front {
@@ -151,7 +145,6 @@ header {
     filter: saturate(0);
     opacity: 0.5;
 }
-
 
 @media screen and (min-width:992px) {
     main {

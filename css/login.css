@@ -61,7 +61,6 @@ body {
     color: #000000;
     cursor: pointer;
     font-size: 1em;
-
     width: 100%;
     max-width: 200px;
     font-family: pixer;
@@ -72,5 +71,4 @@ body {
     background-color: #5d5d5d52;
     color: #33333393;
     cursor: auto;
-
 }

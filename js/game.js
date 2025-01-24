@@ -28,7 +28,6 @@ let canClick = true; // Variável para controlar os cliques
 const checkandGame = () => {
     const disabledCards = document.querySelectorAll('.disabled-card');
 
-
     if (disabledCards.length == 20) {
         clearInterval(this.loop);
 
@@ -47,7 +46,6 @@ const checkandGame = () => {
                 modal.style.display = 'none';
             }
         }
-
     }
 }
 
@@ -75,18 +73,13 @@ const checkCards = () => {
             secondCard = '';
             canClick = true;
         }, 500);
-
-
-
     }
 };
 
 const revealCard = ({ target }) => {
 
-
     if (!canClick) return; // Impedir cliques se não puder clicar
     if (target.parentNode.classList.contains('reveal-card')) return; // Impedir cliques na mesma carta
-
 
     if (firistCard === '') {
 
@@ -102,9 +95,7 @@ const revealCard = ({ target }) => {
         checkCards();
     }
 
-
 };
-
 
 const createCard = (character) => {
 
@@ -131,7 +122,6 @@ const loadGame = () => {
         grid.appendChild(card);
     });
 }
-
 const startTimer = () => {
     this.loop = setInterval(() => {
         const currentTimer = +timer.innerHTML;
@@ -145,6 +135,3 @@ window.onload = () => {
     startTimer();
     loadGame();
 };
-
-
-
