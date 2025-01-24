@@ -1,6 +1,7 @@
 const grid = document.querySelector('.grid');
-const spanPlayer= document.querySelector('.player')
-const timer= document.querySelector('.timer')
+const spanPlayer = document.querySelector('.player')
+const timer = document.querySelector('.timer')
+
 const characters = [
     'brook',
     'chopper',
@@ -22,13 +23,30 @@ const createElement = (tag, className) => {
 
 let firistCard = '';
 let secondCard = '';
+let canClick = true; // Variável para controlar os cliques
 
 const checkandGame = () => {
-    const disabledCards = document.querySelector('.disabled-card')
+    const disabledCards = document.querySelectorAll('.disabled-card');
+
 
     if (disabledCards.length == 20) {
         clearInterval(this.loop);
-        alert(`Parabéns ${spanPlayer.innerHTML}! Seu tempo foi de ${timer.innerHTML} segundos. `)
+
+        document.getElementById('player-name').innerText = spanPlayer.innerHTML;
+        document.getElementById('final-time').innerText = timer.innerHTML;
+
+        const modal = document.getElementById('endgame-modal');
+        modal.style.display = 'block';
+
+        const closeButton = document.querySelector('.close-button');
+        closeButton.onclick = () => {
+            modal.style.display = 'none';
+        }
+        window.onclick = (event) => {
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        }
 
     }
 }
@@ -46,6 +64,7 @@ const checkCards = () => {
         secondCard = '';
 
         checkandGame();
+        canClick = true; // Permitir novos cliques
 
     } else {
         setTimeout(() => {
@@ -54,6 +73,7 @@ const checkCards = () => {
 
             firistCard = '';
             secondCard = '';
+            canClick = true;
         }, 500);
 
 
@@ -63,11 +83,10 @@ const checkCards = () => {
 
 const revealCard = ({ target }) => {
 
-    /*  if(target.parentNode.className.inclubes('reveal-card')){
-          return'';
-              }*/
 
-    //SERIA PARA O BUG DE VIRAR A CARTA DEPOIS QUE JA TENHA VIRADO, MAS ESSE BUG NÃO TA CONTECENDO, NEM O CÓDIGO FUNCIONOU... 
+    if (!canClick) return; // Impedir cliques se não puder clicar
+    if (target.parentNode.classList.contains('reveal-card')) return; // Impedir cliques na mesma carta
+
 
     if (firistCard === '') {
 
@@ -78,7 +97,7 @@ const revealCard = ({ target }) => {
 
         target.parentNode.classList.add('reveal-card')
         secondCard = target.parentNode;
-
+        canClick = false; // Bloquear novos cliques
 
         checkCards();
     }
@@ -113,17 +132,17 @@ const loadGame = () => {
     });
 }
 
-const startTimer = () =>{
-this.loop=  setInterval(() => {
-const currentTimer= +timer.innerHTML;
-timer.innerHTML= currentTimer + 1
-}, 1000);
+const startTimer = () => {
+    this.loop = setInterval(() => {
+        const currentTimer = +timer.innerHTML;
+        timer.innerHTML = currentTimer + 1
+    }, 1000);
 }
 
-window.onload = () =>{
-const playerName = localStorage.getItem('player')
-spanPlayer.innerHTML=playerName
-startTimer();
+window.onload = () => {
+    const playerName = localStorage.getItem('player')
+    spanPlayer.innerHTML = playerName
+    startTimer();
     loadGame();
 };
 

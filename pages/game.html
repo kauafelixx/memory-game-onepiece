@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,8 +10,22 @@
     <script src="../js/game.js" defer></script>
     <title>Memory Game</title>
 </head>
+
 <body>
+
+
+
     <main>
+
+        <div id="endgame-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <h2>Parabéns <span id="player-name"></span>!</h2>
+                <p>Seu tempo foi de <span id="final-time"></span> segundos.</p>
+
+            </div>
+        </div>
+
         <header>
             <span class="player"></span>
             <span id="timer">Tempo: <span class="timer">00</span></span>
@@ -18,7 +33,8 @@
         <div class="grid">
     </main>
 
-</div>
+    </div>
     </div>
 </body>
+
 </html>
