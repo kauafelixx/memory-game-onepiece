@@ -123,10 +123,10 @@ const loadGame = () => {
     });
 }
 const startTimer = () => {
-    timer.innerHTML = '0';  // Inicializa o timer com 0
+    timer.innerText = '0';  // Inicializa o timer com 0
     this.loop = setInterval(() => {
-        const currentTimer = Number(timer.innerHTML);  // Converte o valor do timer para número usando Number()
-        timer.innerHTML = (currentTimer + 1).toString();  // Atualiza o timer e converte para string
+        const currentTimer = parseInt(timer.innerText, 10);  // Converte o valor do timer para inteiro usando parseInt
+        timer.innerText = (currentTimer + 1).toString();  // Atualiza o timer e converte para string
     }, 1000);
 }
 
