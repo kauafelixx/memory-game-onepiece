@@ -125,7 +125,11 @@ const loadGame = () => {
 const startTimer = () => {
     timer.innerText = '0';  // Inicializa o timer com 0
     this.loop = setInterval(() => {
-        const currentTimer = parseInt(timer.innerText, 10);  // Converte o valor do timer para inteiro usando parseInt
+        const currentTimer = Number(timer.innerText);  // Converte o valor do timer para número usando Number
+        if (isNaN(currentTimer)) {
+            console.error('Erro: currentTimer é NaN');
+            return;
+        }
         timer.innerText = (currentTimer + 1).toString();  // Atualiza o timer e converte para string
     }, 1000);
 }
