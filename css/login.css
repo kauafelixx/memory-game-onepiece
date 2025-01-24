@@ -2,8 +2,14 @@
     font-family: pixer;
     src: url(../Pixellari.ttf);
 }
+@font-face {
+    font-family: one-peace;
+    src: url(../one\ piece\ font.ttf);
+}
 
-
+body{
+    overflow-y: hidden;
+}
 
 .login-form{
 display: flex;
@@ -27,7 +33,7 @@ letter-spacing: 2px;
 }
 .login-header  h1{
     color: #333;
-    font-size: 2.5em;
+    font-size: 2em;
 }
 .login-input{
     border: 2px solid #333;
