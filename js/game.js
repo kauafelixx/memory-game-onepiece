@@ -140,3 +140,9 @@ window.onload = () => {
     startTimer();
     loadGame();
 };
+
+document.getElementById("btnplay").addEventListener("click", function () {
+    const audio = document.getElementById("audio");
+    audio.play();
+    audio.volume=0.1
+})

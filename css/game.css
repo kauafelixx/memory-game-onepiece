@@ -74,7 +74,7 @@ header {
     padding: 30px;
     margin: 0 0 30px;
     border-radius: 5px;
-    background-color: rgba(255, 255, 255, 0.825);
+   
     box-shadow: 2px 2px 5px #333333bd;
 
     .player {
@@ -149,5 +149,26 @@ header {
 @media screen and (min-width:992px) {
     main {
         background-image: url(../imagens/fundo-pc.jpg);
+    }
+}
+
+
+button{
+    background-color: #ebc920;
+    border-radius: 50%;
+width: 50px;
+height: 50px;
+    border: none;
+    font-size: 1.5em;
+    font-weight: 700;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:active, &:focus{
+        background-color: rgba(255, 255, 255, 0.825);
+    color: black;
+        font-size: 2em;
+      
     }
 }
