@@ -62,7 +62,7 @@ main {
     display: flex;
     flex-direction: column;
     width: 100%;
-    background-image: url(../imagens/arte-digital-de-fundo-japao.jpg);
+    background-image: linear-gradient(to top, #d18c00, #444444, #1b1b1b, #101010);
     background-position: center bottom;
     background-repeat: no-repeat;
     background-size: cover;
