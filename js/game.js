@@ -32,6 +32,7 @@ const checkandGame = () => {
         clearInterval(this.loop);
 
         document.getElementById('player-name').innerText = spanPlayer.innerHTML;
+      
         document.getElementById('final-time').innerText = timer.innerHTML;
 
         const modal = document.getElementById('endgame-modal');

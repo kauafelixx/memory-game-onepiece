@@ -10,6 +10,7 @@
 
 body {
     overflow-y: hidden;
+    background-color: #FED022;
 }
 
 
@@ -36,11 +37,32 @@ body {
 .login-header img {
     width: 170px;
     filter: drop-shadow(2px 2px 5px #333333a7);
+    animation: pulse 4s infinite;
+  
+}
+
+@keyframes pulse {
+    0%{
+        width: 170px;
+    }
+    25%{
+width: 200px;
+    }
+    50%{
+  width: 170px;
+    }
+    75%{
+width: 200px;
+    }
+    100%{
+  width: 170px;
+    }
 }
 
 .login-header h1 {
-    color: #333;
+    color: #000000;
     font-size: 2em;
+
 }
 
 .login-input {
@@ -58,10 +80,10 @@ body {
 }
 
 .login-buttom {
-    background-color: #eb2026;
+    background-color: #cf282f;
     padding: 10px;
     border-radius: 8px;
-    color: #000000;
+    color: #ffffff;
     cursor: pointer;
     font-size: 1em;
     width: 100%;
@@ -71,7 +93,7 @@ body {
 }
 
 .login-buttom:disabled {
-    background-color: #5d5d5d52;
-    color: #33333393;
+    background-color: #cf2830bc;
+    color: #ffffff93;
     cursor: auto;
 }
