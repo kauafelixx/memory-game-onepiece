@@ -76,22 +76,25 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #000000a7;
+ height: 50px;
     width: 100%;
     max-width: 500px;
     padding: 30px;
     margin: 0 0 30px;
-    border-radius: 5px;
-   color: white;
-    box-shadow: 2px 2px 5px #333333bd;
-
+    border-radius: 8px;
+   color: rgb(0, 0, 0);
+border: 10px double rgb(199, 129, 0);
+box-shadow: 0px  0px 10px black;
+background-color: white;
     .player {
         
         font-size: 1.4em;
-        font-family: one-peace;
-        text-transform: capitalize;
+       font-family: Arial, Helvetica, sans-serif;
+
+
         font-weight: bolder;
-        letter-spacing: 4px;
+        padding: 5px;
+     
     }
 
     .timer {

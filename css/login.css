@@ -10,7 +10,7 @@
 
 body {
     overflow-y: hidden;
-    background-color: #FED022;
+    background-color: #005499;
 }
 
 
@@ -60,7 +60,7 @@ width: 200px;
 }
 
 .login-header h1 {
-    color: #000000;
+    color: #ffffff;
     font-size: 2em;
 
 }
@@ -80,20 +80,21 @@ width: 200px;
 }
 
 .login-buttom {
-    background-color: #cf282f;
+    background-color: #31cbff;
     padding: 10px;
     border-radius: 8px;
-    color: #ffffff;
+    color: #000000;
     cursor: pointer;
     font-size: 1em;
     width: 100%;
     max-width: 200px;
     font-family: pixer;
     box-shadow: 2px 2px 5px #33333386;
+    transition: 1s;
 }
 
 .login-buttom:disabled {
-    background-color: #cf2830bc;
+    background-color: #4967719d;
     color: #ffffff93;
     cursor: auto;
 }
